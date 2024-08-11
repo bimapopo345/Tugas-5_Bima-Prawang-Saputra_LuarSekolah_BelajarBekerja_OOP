@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<script src="https://cdn.tailwindcss.com"></script>
+<html>
+  <head>
+    <link rel="stylesheet" href="addtocart.css" />
+    <script
+      src="https://kit.fontawesome.com/92d70a2fd8.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="header">
+      <p class="logo">LOGO</p>
+      <div class="cart">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <p id="count">0</p>
+      </div>
+    </div>
+    <div class="container">
+      <div id="root"></div>
+      <div class="sidebar">
+        <div class="head"><p>Keranjang</p></div>
+        <div id="cartItem">Keranjang Anda Kosong</div>
+        <div class="foot">
+          <h3>Total</h3>
+          <h2 id="total">0.00</h2>
+        </div>
+        <div id="tombol">
+          <div class="flex mb-3">
+            <button
+              class="bg-red-700 text-white px-2 py-1 rounded-full"
+              onclick="clearCart()"
+            >
+              Hapus Semua
+            </button>
+            <button
+              class="bg-green-700 text-white px-2 py-1 rounded-full"
+              onclick="startPayment()"
+            >
+              Bayar
+            </button>
+          </div>
+          <input
+            id="confirmOrderInput"
+            type="text"
+            placeholder="Konfirmasi Pesanan"
+            style="display: none"
+          />
+          <button
+            id="confirmOrderButton"
+            onclick="confirmOrder()"
+            style="display: none"
+          >
+            Konfirmasi Pesanan
+          </button>
+          <p id="paymentStatus"></p>
+        </div>
+      </div>
+    </div>
+    <script src="addtocart.js"></script>
+  </body>
+</html>
